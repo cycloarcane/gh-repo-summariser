@@ -179,6 +179,12 @@ def generate_repo_summary(repo_details):
             return None
             
         content = response_json["choices"][0]["message"]["content"]
+        
+        # Remove thinking tokens if present
+        # Pattern for <think>...</think> or other similar thinking tokens
+        content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+        content = re.sub(r'\*\*<think>\*\*.*?\*\*</think>\*\*', '', content, flags=re.DOTALL)
+        
         return content.strip()
         
     except Exception as e:
