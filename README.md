@@ -1,6 +1,6 @@
-# GitHub Repository Summarizer
+# GitHub Repository Summariser
 
-A Python application that automatically analyzes all your created GitHub repositories and generates a comprehensive Obsidian-compatible Markdown summary using a locally hosted LLM.
+A Python application that automatically analyses all your created GitHub repositories and generates a comprehensive Obsidian-compatible Markdown summary using a locally hosted LLM.
 
 ## Features
 
@@ -47,7 +47,7 @@ GITHUB_USERNAME=your_github_username
 OUTPUT_DIR=~/Documents/github-summaries" > .env
 
 # Run the script
-python summarize.py
+python summarise.py
 ```
 
 ### Environment Variables
@@ -72,9 +72,9 @@ The script generates a comprehensive Markdown file with sections for:
   - Topics
   - AI-generated summary
 
-## Customization
+## Customisation
 
-You can customize the script by:
+You can customise the script by:
 - Modifying the LLM prompt in the `generate_repo_summary` function
 - Adjusting the Markdown template in the `create_markdown_summary` function
 - Adding additional repository metrics to collect and display
